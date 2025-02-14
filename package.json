@@ -2,6 +2,11 @@
   "name": "panda-lib",
   "version": "6.6.6",
   "type": "module",
+  "scripts": {
+    "codegen": "pandacss codegen",
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
   "devDependencies": {
     "@pandacss/dev": "^0.53.0",
     "@total-typescript/tsconfig": "^1.0.4",
