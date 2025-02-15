@@ -1,12 +1,14 @@
 import {type Config, defineConfig} from '@pandacss/dev'
 
 export function makeConfig(props: Config) {
+  const pandaLibPath = require.resolve('panda-lib').replace('.cjs', '.js')
+
   return defineConfig({
     strictTokens: true,
     strictPropertyValues: true,
     preflight: true,
     outdir: './node_modules/panda-lib/styled-system',
-
+    validation: 'error',
     importMap: 'panda-lib',
     outExtension: 'js',
     globalCss: {
@@ -27,9 +29,6 @@ export function makeConfig(props: Config) {
       },
     },
     ...props,
-    include: [
-      ...(props.include ?? []),
-      './node_modules/panda-lib/src/components/**/*.{ts,tsx}',
-    ],
+    include: [...(props.include ?? []), pandaLibPath],
   })
 }

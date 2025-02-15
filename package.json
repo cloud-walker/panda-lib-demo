@@ -47,6 +47,7 @@
   "devDependencies": {
     "@pandacss/dev": "^0.53.0",
     "@total-typescript/tsconfig": "^1.0.4",
+    "@types/node": "^22.13.4",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "react": "^19.0.0",
