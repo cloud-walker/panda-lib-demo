@@ -7,6 +7,43 @@
     "build": "tsup",
     "dev": "tsup --watch"
   },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/components.d.ts",
+        "default": "./dist/components.js"
+      },
+      "require": {
+        "types": "./dist/components.d.cts",
+        "default": "./dist/components.cjs"
+      }
+    },
+    "./panda": {
+      "import": {
+        "types": "./dist/panda.d.ts",
+        "default": "./dist/panda.js"
+      },
+      "require": {
+        "types": "./dist/panda.d.cts",
+        "default": "./dist/panda.cjs"
+      }
+    },
+    "./css": {
+      "types": "./styled-system/css/index.d.ts",
+      "default": "./styled-system/css/index.mjs"
+    },
+    "./patterns": {
+      "types": "./styled-system/patterns/index.d.ts",
+      "default": "./styled-system/patterns/index.mjs"
+    },
+    "./tokens": {
+      "types": "./styled-system/tokens/index.d.ts",
+      "default": "./styled-system/tokens/index.mjs"
+    },
+    "./types": {
+      "types": "./styled-system/types/index.d.ts"
+    }
+  },
   "devDependencies": {
     "@pandacss/dev": "^0.53.0",
     "@total-typescript/tsconfig": "^1.0.4",

@@ -2,5 +2,6 @@
   "extends": "@total-typescript/tsconfig/bundler/no-dom/library",
   "compilerOptions": {
     "jsx": "react-jsx"
-  }
+  },
+  "include": ["src", "styled-system"]
 }
