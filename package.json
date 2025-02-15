@@ -30,15 +30,15 @@
     },
     "./css": {
       "types": "./styled-system/css/index.d.ts",
-      "default": "./styled-system/css/index.mjs"
+      "default": "./styled-system/css/index.js"
     },
     "./patterns": {
       "types": "./styled-system/patterns/index.d.ts",
-      "default": "./styled-system/patterns/index.mjs"
+      "default": "./styled-system/patterns/index.js"
     },
     "./tokens": {
       "types": "./styled-system/tokens/index.d.ts",
-      "default": "./styled-system/tokens/index.mjs"
+      "default": "./styled-system/tokens/index.js"
     },
     "./types": {
       "types": "./styled-system/types/index.d.ts"

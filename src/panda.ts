@@ -5,11 +5,16 @@ export function makeConfig(props: Config) {
     strictTokens: true,
     strictPropertyValues: true,
     preflight: true,
-    clean: true,
     outdir: './node_modules/panda-lib/styled-system',
-    include: [...(props.include ?? []), 'panda-lib'],
+
     importMap: 'panda-lib',
     outExtension: 'js',
+    globalCss: {
+      ':root': {
+        backgroundColor: '#222',
+        color: 'white',
+      },
+    },
     theme: {
       extend: {
         tokens: {
@@ -22,5 +27,9 @@ export function makeConfig(props: Config) {
       },
     },
     ...props,
+    include: [
+      ...(props.include ?? []),
+      './node_modules/panda-lib/src/components/**/*.{ts,tsx}',
+    ],
   })
 }
