@@ -1,8 +1,6 @@
-import {type Config, defineConfig} from '@pandacss/dev'
+import {type Config, defineConfig, definePreset} from '@pandacss/dev'
 
 export function makeConfig(props: Config) {
-  const pandaLibPath = require.resolve('panda-lib').replace('.cjs', '.js')
-
   return defineConfig({
     strictTokens: true,
     strictPropertyValues: true,
@@ -29,6 +27,6 @@ export function makeConfig(props: Config) {
       },
     },
     ...props,
-    include: [...(props.include ?? []), pandaLibPath],
+    include: [...(props.include ?? []), './styled-system/panda.buildinfo.json'],
   })
 }

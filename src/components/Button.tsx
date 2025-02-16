@@ -7,8 +7,9 @@ export function Button(props: React.ComponentPropsWithRef<'button'>) {
       className={cx(
         props.className,
         css({
+          // color: '[#330000]',
           color: 'cool',
-          bg: '[red]',
+          // bg: '[red]',
         }),
       )}
     />
