@@ -1,16 +1,17 @@
-import {css, cx} from 'panda-lib/css'
+import { css, cx } from "panda-lib/css";
 
-export function Button(props: React.ComponentPropsWithRef<'button'>) {
+export function Button(props: React.ComponentPropsWithRef<"button">) {
   return (
     <button
       {...props}
       className={cx(
         props.className,
         css({
-          color: 'cool',
-          bg: '[red]',
-        }),
+          // color: "[#330000]",
+          color: "cool",
+          // bg: '[red]',
+        })
       )}
     />
-  )
+  );
 }

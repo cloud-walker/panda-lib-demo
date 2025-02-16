@@ -3,9 +3,12 @@
   "version": "6.6.6",
   "type": "module",
   "scripts": {
-    "codegen": "pandacss codegen",
+    "ship": "panda ship \"src/components/**/*.{ts,tsx}\"",
+    "prepare": "panda codegen && pnpm ship",
     "build": "tsup",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "stories": "storybook dev -p 6006 --no-open",
+    "build-stories": "storybook build"
   },
   "exports": {
     ".": {
@@ -46,12 +49,19 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.53.0",
+    "@storybook/addon-essentials": "^8.5.6",
+    "@storybook/addon-interactions": "^8.5.6",
+    "@storybook/blocks": "^8.5.6",
+    "@storybook/react": "^8.5.6",
+    "@storybook/react-vite": "^8.5.6",
+    "@storybook/test": "^8.5.6",
     "@total-typescript/tsconfig": "^1.0.4",
     "@types/node": "^22.13.4",
-    "@types/react": "^19.0.8",
+    "@types/react": "^19.0.9",
     "@types/react-dom": "^19.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "storybook": "^8.5.6",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   }

@@ -1,6 +1,6 @@
-import {makeConfig} from './src/panda'
+import { _makeConfig } from "./src/panda/_internal";
 
-export default makeConfig({
-  // include: ['./src/components/**/*.{ts,tsx}'],
-  outdir: './styled-system',
-})
+export default _makeConfig({
+  outdir: "./styled-system",
+  include: ["./src/components/**/*.{ts,tsx}"],
+});
